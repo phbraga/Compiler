@@ -11,17 +11,13 @@ public class CompiladorMainClass {
 
     public static void main(String[] args) {
         /**
-         java -jar "C:\Users\Pedro\Dropbox\Faculdade\5° Periodo\Compiladores\Compilador_PHMB\dist\Compilador_PHMB.jar" "C:\Users\Pedro\Dropbox\Faculdade\5° Periodo\Compiladores\Compilador_PHMB\teste.c"
+         Example: java -jar "C:\Users\Pedro\Dropbox\Faculdade\5° Periodo\Compiladores\Compilador_PHMB\dist\Compilador_PHMB.jar" "C:\Users\Pedro\Dropbox\Faculdade\5° Periodo\Compiladores\Compilador_PHMB\teste.c"
          */
         try {
             Scanner scanner = Scanner.getInstance();
             FileReader fileReader = new FileReader(args[0]);
             scanner.setFileReader(fileReader);
             
-//            Token tk;
-//            while ((tk = scanner.scan()) != null) {
-//                System.out.println(tk);
-//            }
             Parser parser = Parser.getInstance();
             parser.init();
             
